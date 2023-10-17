@@ -1,35 +1,3 @@
-// const ziad = document.querySelector("#ziad");
-// const kam = document.querySelector("#kam");
-// const natijeh = document.querySelector(".natijeh");
-// natijeh.value = 0;
-// function FN(x) {
-//   if (x == "+") {
-//     natijeh.value++;
-//   } else {
-//     if (natijeh.value > 0) {
-//       natijeh.value--;
-//     } else {
-//       console.log("ja nadare");
-//     }
-//   }
-// }
-
-// const courseName = document.querySelector(".name");
-// const courseScore = document.querySelector(".score");
-// const addBTN = document.querySelector(".addFN");
-// const output = document.getElementById("output");
-// const courseList = [];
-// let courseListText = "";
-// addBTN.addEventListener("click", () => {
-//   const course = {
-//     name: courseName.value,
-//     score: courseScore.value,
-//   };
-//   courseList.push(course);
-//   courseListText +=
-//     "<li>" + course.name + " | " + course.score + "</li>";
-//   output.innerHTML = courseListText;
-// });
 const name = document.getElementById("name");
 const lastname = document.getElementById("lastname");
 const signIn = document.getElementById("signIn");
@@ -60,7 +28,7 @@ signIn.addEventListener("click", () => {
     output.innerHTML = nameListText;
   } else {
     console.log(111);
-    // alert('fill all the inputs');
+    alert('fill all the inputs');
     if (
       name.value == "" ||
       lastname.value == "" ||
@@ -68,8 +36,9 @@ signIn.addEventListener("click", () => {
       fName.value == ""
     ) {
 
-    if(name.value =="")
+    if(name.value ==""){
       name.style = 'border:red 5px solid';
+    }
     if (lastname.value == "") {
       lastname.style = "border:red 5px solid";
     }
@@ -79,7 +48,34 @@ signIn.addEventListener("click", () => {
     if (fName.value == "") {
       fName.style = "border:red 5px solid";
     }  
-     
+    }
+    name.oninput = function(){
+      if(name.value==''){
+        name.style = "border:red 5px solid"
+      }else {
+        name.style = "border:gray 1px solid ; border-radius:3px"
+      }
+    }    
+    lastname.oninput = function(){
+      if(lastname.value==''){
+        lastname.style = "border:red 5px solid"
+      }else {
+        lastname.style = "border:gray 1px solid ; border-radius:3px"
+      }
+    }   
+    code.oninput = function(){
+      if(code.value==''){
+        code.style = "border:red 5px solid"
+      }else {
+        code.style = "border:gray 1px solid ; border-radius:3px"
+      }
+    }   
+    fName.oninput = function(){
+      if(fName.value==''){
+        fName.style = "border:red 5px solid"
+      }else {
+        fName.style = "border:gray 1px solid ; border-radius:3px"
+      }
     }
     
   }
