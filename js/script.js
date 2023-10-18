@@ -27,7 +27,6 @@ signIn.addEventListener("click", () => {
       "</li>";
     output.innerHTML = nameListText;
   } else {
-    console.log(111);
     alert('fill all the inputs');
     if (
       name.value == "" ||
