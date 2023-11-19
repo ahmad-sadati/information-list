@@ -20,7 +20,7 @@ signIn.addEventListener("click", () => {
     nameList.forEach((reg) => {
       console.log(1);
       nameListText += `
-      <li> name:  
+      <li class="justify-content-center align-items-center text-center list-group-item"> name:  
       ${reg.Name}
       lastname: 
       ${reg.LastName}
